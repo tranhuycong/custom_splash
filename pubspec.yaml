@@ -1,8 +1,8 @@
 name: custom_splash
 description: A Flutter package to custom splash screen like change logo icon, logo animation, and splash screen background color.
-version: 0.0.1
+version: 0.0.2
 author: Tran Cong<congtranit@gmail.com>
-homepage:
+homepage: https://github.com/tranhuycong/custom_splash
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

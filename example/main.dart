@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './animated_splash.dart';
+import 'package:custom_splash/custom_splash.dart';
 
 void main() {
   Function duringSplash = () {
@@ -16,16 +16,16 @@ void main() {
   Map<int, Widget> op = {1: MyApp(), 2: MyApp()};
 
   runApp(MaterialApp(
-    home: AnimatedSplash(
+    home: CustomSplash(
       imagePath: 'assets/flutter_icon.png',
       backGroundColor: Colors.deepOrange,
       // backGroundColor: Color(0xfffc6042),
-      animationEffect: 'zoom-out',
+      animationEffect: 'zoom-in',
       logoSize: 200,
       home: MyApp(),
       customFunction: duringSplash,
       duration: 2500,
-      type: AnimatedSplashType.StaticDuration,
+      type: CustomSplashType.StaticDuration,
       outputAndHome: op,
     ),
   ));
