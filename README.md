@@ -99,7 +99,7 @@ runApp(MaterialApp(
         home: MyApp(),
         customFunction: duringSplash,
         duration: 2500,
-        type: CustomSplashType.StaticDuration,
+        type: CustomSplashType.BackgroundProcess,
         outputAndHome: op,
     ),
 ));
