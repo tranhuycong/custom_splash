@@ -110,13 +110,15 @@ class _CustomSplashState extends State<CustomSplash>
   @override
   Widget build(BuildContext context) {
     _runfor == CustomSplashType.BackgroundProcess
-        ? Future.delayed(Duration.zero).then((value) {
-            var res = _customFunction();
+        ? Future.delayed(Duration.zero).then((value) async {
+            var res = await _customFunction();
             //print("$res+${_outputAndHome[res]}");
-            Future.delayed(Duration(milliseconds: _duration)).then((value) {
-              Navigator.of(context).pushReplacement(CupertinoPageRoute(
+            //Future.delayed(Duration(milliseconds: _duration)).then((value) {
+            //  Navigator.of(context).pushReplacement(CupertinoPageRoute(
+            //      builder: (BuildContext context) => _outputAndHome[res]));
+            // });
+            Navigator.of(context).pushReplacement(CupertinoPageRoute(
                   builder: (BuildContext context) => _outputAndHome[res]));
-            });
           })
         : Future.delayed(Duration(milliseconds: _duration)).then((value) {
             Navigator.of(context).pushReplacement(
